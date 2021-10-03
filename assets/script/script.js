@@ -27,40 +27,57 @@ btnCalc.addEventListener("click", function () {
    const otherElec = (Number(elElec.value) * 0.5) / 4;
    const water = Number(elWate.value);
    let billLam = Math.round(
-      roomPer + lamElec + water + calcAvg(260) + calcAvg(30)
+      roomPer + lamElec + water + calcAvg(260000) + calcAvg(30000)
    );
-   let billOther = Math.round(roomPer + otherElec + calcAvg(260) + calcAvg(30));
+   let billOther = Math.round(
+      roomPer + otherElec + calcAvg(260000) + calcAvg(30000)
+   );
 
    let billLuan;
    let billTi;
    let billBao;
    let billTu;
 
-   if (checkboxLam.checked) billLam += 150;
+   if (checkboxLam.checked) billLam += 150000;
    if (checkboxLuan.checked) {
-      billLuan = billOther + 150;
+      billLuan = billOther + 150000;
    } else {
       billLuan = billOther;
    }
    if (checkboxTi.checked) {
-      billTi = billOther + 150;
+      billTi = billOther + 150000;
    } else {
       billTi = billOther;
    }
    if (checkboxBao.checked) {
-      billBao = billOther + 150;
+      billBao = billOther + 150000;
    } else {
       billBao = billOther;
    }
    if (checkboxTu.checked) {
-      billTu = billOther + 150;
+      billTu = billOther + 150000;
    } else {
       billTu = billOther;
    }
 
-   elLam.textContent = billLam;
-   elLuan.textContent = billLuan;
-   elTi.textContent = billTi;
-   elBao.textContent = billBao;
-   elTu.textContent = billTu;
+   elLam.textContent = billLam.toLocaleString("en-US", {
+      style: "currency",
+      currency: "VND",
+   });
+   elLuan.textContent = billLuan.toLocaleString("en-US", {
+      style: "currency",
+      currency: "VND",
+   });
+   elTi.textContent = billTi.toLocaleString("en-US", {
+      style: "currency",
+      currency: "VND",
+   });
+   elBao.textContent = billBao.toLocaleString("en-US", {
+      style: "currency",
+      currency: "VND",
+   });
+   elTu.textContent = billTu.toLocaleString("en-US", {
+      style: "currency",
+      currency: "VND",
+   });
 });
