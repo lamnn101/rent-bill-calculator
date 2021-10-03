@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./assets/css/style.css" />
+      <title>Rent Bill Calculator</title>
+   </head>
+   <body>
+      <div class="app">
+         <h1 class="title">Rent Bill Calculator</h1>
+         <p class="desc">
+            Please enter the bills and the fees (thousand VND) into the
+            corresponding inputs below for calculation:
+         </p>
+         <div class="inputs">
+            <div class="field flex--col">
+               <label for="#">Room Fee</label>
+               <input type="number" class="room" />
+            </div>
+            <div class="field flex--col">
+               <label for="#">Electricity Bill</label>
+               <input type="number" class="elec" />
+            </div>
+            <div class="field flex--col">
+               <label for="#">Water Bill</label>
+               <input type="number" class="wate" />
+            </div>
+            <div class="vehicle">
+               <p>Please select person with vehicle (150/person):</p>
+               <div class="selection">
+                  <div class="item">
+                     <input type="checkbox" class="vehicle-lam" />
+                     <label for="#">Lam</label>
+                  </div>
+                  <div class="item">
+                     <input type="checkbox" class="vehicle-luan" />
+                     <label for="#">Luan</label>
+                  </div>
+                  <div class="item">
+                     <input type="checkbox" class="vehicle-ti" />
+                     <label for="#">Huy</label>
+                  </div>
+                  <div class="item">
+                     <input type="checkbox" class="vehicle-bao" />
+                     <label for="#">Bao</label>
+                  </div>
+                  <div class="item">
+                     <input type="checkbox" class="vehicle-tu" />
+                     <label for="#">Thanh</label>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="sub-desc">
+            <p>In addition, the following things are charged to everyone:</p>
+            <div class="item-fee">
+               <li>Internet Bill: 260</li>
+               <li>Garbage Fee: 30</li>
+            </div>
+         </div>
+         <button class="btn">Calculator</button>
+         <div class="result">
+            <h3>Result:</h3>
+            <div class="result__detail">
+               <p>Lam</p>
+               <span class="lam-result">0</span>
+            </div>
+            <div class="result__detail">
+               <p>Luan</p>
+               <span class="luan-result">0</span>
+            </div>
+            <div class="result__detail">
+               <p>Huy</p>
+               <span class="ti-result">0</span>
+            </div>
+            <div class="result__detail">
+               <p>Bao</p>
+               <span class="bao-result">0</span>
+            </div>
+            <div class="result__detail">
+               <p>Thanh</p>
+               <span class="tu-result">0</span>
+            </div>
+         </div>
+      </div>
+      <script src="./assets/script/script.js"></script>
+   </body>
+</html>
